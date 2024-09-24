@@ -1,9 +1,9 @@
-Name: YOUR NAME HERE
+Name: Stefan Perkovic
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date   |  Time   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                Update |
+|:-------|:-------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Sep:24 | 2:-2:30 | I pondered along with the people at my table on what could be the most efficient solution to the problem. We discusses trying to represent strings into some sort of integer form that we could use to decrease the search time when checking if a word is in a dictionary. We also discusses hash maps which as I understand are similar to a python dictionary, so that we can just quickly check if a word exists by telling if it has a value associated with it. |
+|        |         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

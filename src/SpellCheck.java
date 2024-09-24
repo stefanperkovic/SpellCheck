@@ -4,7 +4,7 @@
  * for Adventures in Algorithms
  * At Menlo School in Atherton, CA
  *
- * Completed by: [YOUR NAME HERE]
+ * Completed by: Stefan Perkovic
  * */
 
 public class SpellCheck {
@@ -18,6 +18,16 @@ public class SpellCheck {
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
     public String[] checkWords(String[] text, String[] dictionary) {
+
+        for (int i = 0; i < dictionary.length; i++){
+
+
+        }
+
+
+
+
+
 
         return null;
     }
