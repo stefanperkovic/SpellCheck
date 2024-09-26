@@ -26,7 +26,22 @@ public class SpellCheck {
             checker.put(dictionary[i], true);
         }
 
-        
+        HashMap<String, Boolean> other_words = new HashMap<>();
+
+        ArrayList<String> order = new ArrayList<>();
+
+        for (int i = 0; i< dictionary.length; i++){
+            if (checker.containsKey(dictionary[i])){
+                if (other_words.containsKey(dictionary[i])){
+                    order.add(dictionary[i]);
+                    other_words.put(dictionary[i], true);
+
+                }
+
+            }
+
+        }
+
 
 
 
