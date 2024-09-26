@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Spell Check
  * A puzzle written by Zach Blick
@@ -18,12 +21,12 @@ public class SpellCheck {
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
     public String[] checkWords(String[] text, String[] dictionary) {
-
+        HashMap<String, Boolean> checker = new HashMap<>();
         for (int i = 0; i < dictionary.length; i++){
-
-
+            checker.put(dictionary[i], true);
         }
 
+        
 
 
 
