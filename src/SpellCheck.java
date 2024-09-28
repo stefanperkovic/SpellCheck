@@ -27,26 +27,26 @@ public class SpellCheck {
         }
 
         HashMap<String, Boolean> other_words = new HashMap<>();
-
         ArrayList<String> order = new ArrayList<>();
 
-        for (int i = 0; i< dictionary.length; i++){
-            if (checker.containsKey(dictionary[i])){
-                if (other_words.containsKey(dictionary[i])){
-                    order.add(dictionary[i]);
-                    other_words.put(dictionary[i], true);
+        for (int i = 0; i< text.length; i++){
+            if (!checker.containsKey(text[i])){
+                if (!other_words.containsKey(text[i])){
+                    order.add(text[i]);
+                    other_words.put(text[i], true);
 
                 }
 
             }
+        }
+
+        String[] output = new String[order.size()];
+        for(int i = 0; i < order.size(); i++){
+            output[i] = order.get(i);
 
         }
 
 
-
-
-
-
-        return null;
+        return output;
     }
 }
