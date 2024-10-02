@@ -21,32 +21,31 @@ public class SpellCheck {
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
     public String[] checkWords(String[] text, String[] dictionary) {
-        HashMap<String, Boolean> checker = new HashMap<>();
+
+        Trie dic_trie = new Trie();
         for (int i = 0; i < dictionary.length; i++){
-            checker.put(dictionary[i], true);
+            dic_trie.insert(dictionary[i]);
         }
 
-        HashMap<String, Boolean> other_words = new HashMap<>();
-        ArrayList<String> order = new ArrayList<>();
+        Trie misspelled_words = new Trie();
 
-        for (int i = 0; i< text.length; i++){
-            if (!checker.containsKey(text[i])){
-                if (!other_words.containsKey(text[i])){
-                    order.add(text[i]);
-                    other_words.put(text[i], true);
+        for (int i = 0; i < text.length; i++){
+            if (!misspelled_words.lookup(text[i]) && !dic_trie.lookup(text[i])){
 
-                }
+                misspelled_words.insert(text[i]);
 
             }
-        }
-
-        String[] output = new String[order.size()];
-        for(int i = 0; i < order.size(); i++){
-            output[i] = order.get(i);
 
         }
 
 
-        return output;
+
     }
+
+
+
+
+
+
+
 }
