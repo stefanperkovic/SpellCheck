@@ -22,12 +22,12 @@ public class SpellCheck {
      */
     public String[] checkWords(String[] text, String[] dictionary) {
 
-        Trie dic_trie = new Trie();
+        TrieTST dic_trie = new TrieTST();
         for (int i = 0; i < dictionary.length; i++){
             dic_trie.insert(dictionary[i]);
         }
 
-        Trie misspelled_words = new Trie();
+        TrieTST misspelled_words = new TrieTST();
         ArrayList<String> words = new ArrayList<String>();
 
         for (int i = 0; i < text.length; i++){
@@ -38,7 +38,7 @@ public class SpellCheck {
             }
         }
 
-
+        System.out.println(words);
         return words.toArray(new String[words.size()]);
 
     }

@@ -9,9 +9,9 @@ public class NodeTST {
 
     public NodeTST(){
         this.isWord = false;
-        this.left = new NodeTST();
-        this.middle = new NodeTST();
-        this.right = new NodeTST();
+        this.left = null;
+        this.middle = null;
+        this.right = null;
     }
 
     public NodeTST(char value){
@@ -28,21 +28,18 @@ public class NodeTST {
         isWord = true;
     }
 
-    public Node getLeft() {
+    public NodeTST getLeft() {
         return left;
     }
 
-    public Node getMiddle() {
+    public NodeTST getMiddle() {
         return middle;
     }
 
-    public Node getRight() {
+    public NodeTST getRight() {
         return right;
     }
 
-    public void setWord(boolean word) {
-        isWord = word;
-    }
 
     public void setLeft(NodeTST left) {
         this.left = left;
