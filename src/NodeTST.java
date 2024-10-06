@@ -7,15 +7,12 @@ public class NodeTST {
     private char value;
 
 
-    public NodeTST(){
+    // Initializes node with a certain character value
+    public NodeTST(char value){
         this.isWord = false;
         this.left = null;
         this.middle = null;
         this.right = null;
-    }
-
-    public NodeTST(char value){
-        this();
         this.value = value;
     }
 
