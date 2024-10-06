@@ -28,20 +28,20 @@ public class SpellCheck {
         }
 
         Trie misspelled_words = new Trie();
+        ArrayList<String> words = new ArrayList<String>();
 
         for (int i = 0; i < text.length; i++){
             if (!misspelled_words.lookup(text[i]) && !dic_trie.lookup(text[i])){
 
                 misspelled_words.insert(text[i]);
-
+                words.add(text[i]);
             }
-
         }
 
 
+        return words.toArray(new String[words.size()]);
 
     }
-
 
 
 

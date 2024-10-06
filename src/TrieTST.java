@@ -1,19 +1,29 @@
-public class Trie {
+public class TrieTST {
 
-    private Node root;
+    private NodeTST root;
 
 
-    public Trie (){
-        root = new Node();
+    public TrieTST (){
+        root = new NodeTST();
     }
 
 
     public void insert(String s){
-        Node current = root;
+        NodeTST current = root;
         for (int i = 0; i < s.length(); i++){
-            int index  = s.charAt(i);
-            if (current.getNext()[index] == null){
-                current.getNext()[index] = new Node();
+            char c = s.charAt(i);
+
+
+            if (current.getValue() == c){
+                if (i + 1 < s.length()){
+                    if(current.getMiddle() == null){
+                        NodeTST next_node = new NodeTST(s.charAt(i + 1));
+                        current.setMiddle(next_node);
+                    }
+                }
+
+                current.setMiddle(new Node());
+
 
             }
             current = current.getNext()[index];
@@ -38,13 +48,5 @@ public class Trie {
     public void printTrie(){
 
 
-
     }
-
-
-
-
-
-
-
 }

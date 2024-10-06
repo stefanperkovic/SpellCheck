@@ -5,7 +5,7 @@ public class Node {
 
     public Node(){
         this.isWord = false;
-        this.next = new Node[26];
+        this.next = new Node[256];
     }
 
     public boolean isWord() {
